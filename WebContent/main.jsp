@@ -16,22 +16,11 @@
 </style>
 </head>
 <body>
-<%
-	session.setAttribute("E", 0);
-	session.setAttribute("E", 0);
-	session.setAttribute("I", 0);
-	session.setAttribute("S", 0);
-	session.setAttribute("N", 0);
-	session.setAttribute("F", 0);
-	session.setAttribute("T", 0);
-	session.setAttribute("P", 0);
-	session.setAttribute("J", 0);
-%>
-<div id=wrap>
+<div id="wrap">
 		<h3>자고 일어났는데 20살, <br>대학교 1학년이 되어있다면?</h3>
-		<table id=table>
+		<table id="table">
 		</table>
-			<br><input type="button" onclick="location.href='./page1.jsp'" value="시작하기" id="submit">
+			<br><input type="button" onclick="location.href='../page1.do'" value="시작하기" id="submit">
 </div>
 </body>
 </html>

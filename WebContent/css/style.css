@@ -1,1 +1,32 @@
 @charset "UTF-8";
+*{
+	margin:0 auto;
+	padding:0;
+}
+#wrap{
+	width:450px;
+	height:700px;
+	border:1px solid gray;
+	margin:0 auto;
+	text-align:center;
+	padding:20px;
+}
+table{
+	width:95%;
+	height:95%:
+}
+.right{
+	text-align:right;
+}
+.title{
+	font-size:2em;
+	margin-top:30px;
+}
+td{
+	height:250px;
+	text-align:center;
+}
+a{
+	text-decoration:none;
+	color:black;
+}

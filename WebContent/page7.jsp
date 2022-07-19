@@ -11,25 +11,18 @@
 <link href="<%=conPath%>/css/style.css" rel="stylesheet">
 </head>
 <body>
-<%
-	String page1 = request.getParameter("page1");
-	int value = (int)session.getAttribute(page1);
-	session.setAttribute(page1, value+1);
-%>
-<div id=wrap>
-	<form action="./page8.jsp" method="post">
-		<p>Q7/Q12</p>
-		<h4>동기가 성적 때문에 우울해하고 있다 나는?</h4>
-		<table id=table>
-			<tr>
-				<td><label><input type="radio" name="page1" value="F" required="required">괜찮아?이번에 어렵긴 했어ㅠㅠ</label></td>
-			</tr>
-			<tr>
-				<td><label><input type="radio" name="page1" value="T">뭐야 그래도 나보다 잘 봤는데?</label></td>
-			</tr>
-		</table>
-			<br><input type="submit" value="다음질문" id="submit">
-	</form>
+
+<div id="wrap">
+	<p class="right">Q7/Q12</p>
+	<table id=table>
+	<caption class="title">어색한 분위기의 OT 나는?</caption>
+		<tr>
+			<td><a href="../page8.do?mbti=F">괜찮아?이번에 어렵긴 했어ㅠㅠ</a></td>
+		</tr>
+		<tr>
+			<td><a href="../page8.do?mbti=T">뭐야 그래도 나보다 잘 봤는데?</a></td>
+		</tr>
+	</table>
 </div>
 
 </body>

@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.toy.service.MService;
+import com.toy.service.Service;
+
 /**
  * Servlet implementation class FrontController
  */
@@ -43,13 +46,24 @@ public class FrontController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String comm = uri.substring(conPath.length());
+		Service service = null;
 		String viewPage =  null;
 		if(comm.equals("/main.do")) {
 			viewPage = "main/main.jsp";
-		}else if(comm.equals("/joinView.do")) {
-			// service = new MjoinService();
-			// service.execute(request, response);
-			viewPage = "member/joinView.jsp";
+		}
+		
+		// 시작하기
+		else if(comm.equals("/page1.do")) {
+			service = new MService();
+			service.execute(request, response);
+			viewPage = "page1.jsp";
+		}
+		
+		// 페이지2로
+		else if(comm.equals("/page2.do")) {
+			service = new MService();
+			service.execute(request, response);
+			viewPage = "page2.jsp";
 		}
 				 
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
