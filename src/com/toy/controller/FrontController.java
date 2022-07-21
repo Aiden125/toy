@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.toy.service.MService;
 import com.toy.service.Service;
+import com.toy.service.startService;
 
 /**
  * Servlet implementation class FrontController
@@ -54,7 +55,7 @@ public class FrontController extends HttpServlet {
 		
 		// 시작하기
 		else if(comm.equals("/page1.do")) {
-			service = new MService();
+			service = new startService();
 			service.execute(request, response);
 			viewPage = "page1.jsp";
 		}
