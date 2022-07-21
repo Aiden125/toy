@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="conPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
-<%
-	String conPath = request.getContextPath();
-%>
+
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="<%=conPath%>/css/style.css" rel="stylesheet">
+<link href="${conPath }/css/style.css" rel="stylesheet">
 <style>
 	p{
 		text-align:left;
@@ -20,7 +20,7 @@
 <div id=wrap>
 		<h2>< 결과 ></h2>
 		<h3>기계공학과 스윙스</h3>
-		<form action="./index.jsp" method="post">
+		<form action="${conPath }/main.do" method="post">
 			<p>-기본적으로 일머리가 있는 편</p>
 			<p>-답답한 걸 못참기 때문에 답답한 장면을 보면 하던일도 내팽개치고 나서서 하는 편</p>
 			<p>-조별과제에서 답답함을 못참고 5할 이상을 혼자 하는 편</p>

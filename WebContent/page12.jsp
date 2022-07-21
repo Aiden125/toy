@@ -17,10 +17,10 @@
 	<table id=table>
 	<caption class="title">학교 내에서 맘에 드는 사람이 생겼다 나는?</caption>
 		<tr>
-			<td><a href="${conPath }/result.do?mbti=P">어떻게 고백하는게 가장 좋지? 고백에 대한 생각부터 한다.</a></td>
+			<td><a href="${conPath }/loding.do?mbti=P">어떻게 고백하는게 가장 좋지? 고백에 대한 생각부터 한다.</a></td>
 		</tr>
 		<tr>
-			<td><a href="${conPath }/result.do?mbti=J">나 말고 관심 보이는 사람이 또 있었나? 주변사람부터 떠올려본다.</a></td>
+			<td><a href="${conPath }/loding.do?mbti=J">나 말고 관심 보이는 사람이 또 있었나? 주변사람부터 떠올려본다.</a></td>
 		</tr>
 	</table>
 </div>

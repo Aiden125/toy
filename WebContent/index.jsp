@@ -18,12 +18,10 @@
 </style>
 </head>
 <body>
-<div id="wrap">
-		<h3>자고 일어났는데 20살, <br>대학교 1학년이 되어있다면?</h3>
-		<table id="table">
-		</table>
-			<br><input type="button" onclick="location.href='${conPath}/page1.do'" value="시작하기" id="submit">
-			현재 ${count } 명이 테스트를 진행했습니다.
-</div>
+
+	<script>
+		location.href="${conPath}/main.do";
+	</script>
+
 </body>
 </html>

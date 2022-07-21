@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="conPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
-<%
-	String conPath = request.getContextPath();
-%>
+
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="<%=conPath%>/css/style.css" rel="stylesheet">
+<link href="${conPath }/css/style.css" rel="stylesheet">
 <style>
 	p{
 		text-align:left;
@@ -20,7 +20,7 @@
 <div id=wrap>
 		<h2>< 결과 ></h2>
 		<h3>작곡과 아이유</h3>
-		<form action="./index.jsp" method="post">
+		<form action="${conPath }/main.do" method="post">
 			<p>-MBTI에 꽤나 진심임</p>
 			<p>-영화, 드라마를 보며 가끔 혼자 울곤함</p>
 			<p>-되는대로 살지만 항상 열심히해야겠다라는 생각을 깔고 살아감</p>

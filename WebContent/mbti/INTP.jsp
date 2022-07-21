@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="conPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
-<%
-	String conPath = request.getContextPath();
-%>
+
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="<%=conPath%>/css/style.css" rel="stylesheet">
+<link href="${conPath }/css/style.css" rel="stylesheet">
 <style>
 	p{
 		text-align:left;
@@ -20,7 +20,7 @@
 <div id=wrap>
 		<h2>< 결과 ></h2>
 		<h3>철학과 정형돈</h3>
-		<form action="./index.jsp" method="post">
+		<form action="${conPath }/main.do" method="post">
 			<p>-고독을 즐기는 편</p>
 			<p>-이런저런 생각이 많아 쓸데없는 생각으로 자주 빠짐</p>
 			<p>-평소 말도 리액션도 적지만 본인이 아는 분야에선 말도 많고 리액션도 커짐</p>

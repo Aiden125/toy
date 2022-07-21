@@ -4,7 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class startService implements Service {
+import com.toy.Dao.CountDao;
+
+public class StartService implements Service {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
@@ -17,5 +19,8 @@ public class startService implements Service {
 		session.setAttribute("T", 0);
 		session.setAttribute("P", 0);
 		session.setAttribute("J", 0);
+		
+		CountDao dao = CountDao.getInstance();
+		request.setAttribute("count", dao.count());
 	}
 }

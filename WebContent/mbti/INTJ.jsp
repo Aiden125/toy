@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="conPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
-<%
-	String conPath = request.getContextPath();
-%>
+
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="<%=conPath%>/css/style.css" rel="stylesheet">
+<link href="${conPath }/css/style.css" rel="stylesheet">
 <style>
 	p{
 		text-align:left;
@@ -20,7 +20,7 @@
 <div id=wrap>
 		<h2>< 결과 ></h2>
 		<h3>산업공학과 김구라</h3>
-		<form action="./index.jsp" method="post">
+		<form action="${conPath }/main.do" method="post">
 			<p>-효율을 굉장히 따짐</p>
 			<p>-효율을 너무 따져 효율을 잃어버리는 경우가 있음</p>
 			<p>-굉장히 논리정연한 사고를 가져 말싸움에서 지는 경우가 거의 없음</p>

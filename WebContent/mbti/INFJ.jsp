@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="conPath" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <%
 	String conPath = request.getContextPath();
@@ -8,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="<%=conPath%>/css/style.css" rel="stylesheet">
+<link href="${conPath }/css/style.css" rel="stylesheet">
 <style>
 	p{
 		text-align:left;
@@ -20,7 +22,7 @@
 <div id=wrap>
 		<h2>< 결과 ></h2>
 		<h3>심리학과 닥터스트레인지</h3>
-		<form action="./index.jsp" method="post">
+		<form action="${conPath }/main.do" method="post">
 			<p>-감수성 풍부 1위</p>
 			<p>-뭐든 행동할 때 시뮬레이션을 돌려봄</p>
 			<p>-본인의 감정만큼 주변인들의 감정도 신경을 많이 쓰는 편</p>

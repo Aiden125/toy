@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.toy.service.MService;
 import com.toy.service.Service;
-import com.toy.service.startService;
+import com.toy.service.LodingService;
+import com.toy.service.StartService;
 
 /**
  * Servlet implementation class FrontController
@@ -47,25 +48,35 @@ public class FrontController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String conPath = request.getContextPath();
 		String comm = uri.substring(conPath.length());
+		String pageNumber = comm.substring(5, comm.lastIndexOf("."));
+		String result = request.getParameter("mbti");
 		Service service = null;
 		String viewPage =  null;
+		// 시작
 		if(comm.equals("/main.do")) {
-			viewPage = "main/main.jsp";
-		}
-		
-		// 시작하기
-		else if(comm.equals("/page1.do")) {
-			service = new startService();
+			service = new StartService();
 			service.execute(request, response);
-			viewPage = "page1.jsp";
+			viewPage = "main.jsp";
 		}
-		
-		// 페이지2로
-		else if(comm.equals("/page2.do")) {
+		// 페이지1~12로
+		else if(comm.equals("/page"+pageNumber+".do")) {
 			service = new MService();
 			service.execute(request, response);
-			viewPage = "page2.jsp";
+			viewPage = "page"+pageNumber+".jsp";
 		}
+		// 결과 로딩 페이지로
+		else if(comm.equals("/loding.do")) {
+			service = new LodingService();
+			service.execute(request, response);
+			viewPage = "loding.jsp";
+		}
+		// 결과 페이지로
+		else if(comm.equals("/result.do")) {
+			service = new LodingService();
+			service.execute(request, response);
+			viewPage = "mbti/"+result+".jsp";
+		}
+
 				 
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
