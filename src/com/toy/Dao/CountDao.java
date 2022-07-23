@@ -17,7 +17,7 @@ public class CountDao {
 	
 	private Connection getConnection() throws Exception{
 		Class.forName("oracle.jdbc.OracleDriver"); //1단계
-		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost/moan125", "moan125", "tlqkf123");
 		
 		return conn;
 	}
