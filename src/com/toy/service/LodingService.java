@@ -10,8 +10,6 @@ public class LodingService implements Service {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		CountDao dao = CountDao.getInstance();
-		dao.countUp();
 		
 		String a,b,c,d,mbtiResult;
 		HttpSession session = request.getSession();

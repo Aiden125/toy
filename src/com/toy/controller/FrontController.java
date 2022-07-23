@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.toy.service.MService;
+import com.toy.service.ResultService;
 import com.toy.service.Service;
 import com.toy.service.LodingService;
 import com.toy.service.StartService;
@@ -72,9 +73,9 @@ public class FrontController extends HttpServlet {
 		}
 		// 결과 페이지로
 		else if(comm.equals("/result.do")) {
-			service = new LodingService();
+			service = new ResultService();
 			service.execute(request, response);
-			viewPage = "mbti/"+result+".jsp";
+			viewPage = "mbti/MBTI.jsp";
 		}
 
 				 

@@ -13,7 +13,6 @@
 <body>
 
 <p>로딩 페이지</p>
-당신의 MBTI는 ${mbtiResult } 입니다.
 <form action="${conPath }/result.do" method="post">
 	<input type="hidden" name="mbti" value="${mbtiResult }">
 	<input type="submit" value="결과보기">

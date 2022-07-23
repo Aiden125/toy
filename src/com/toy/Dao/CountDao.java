@@ -49,15 +49,19 @@ public class CountDao {
 	}
 	
 	// 2. 카운트업
-	public void countUp() {
+	public int countUp() {
+		int result = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		String sql = "UPDATE COUNTUP SET NO = NO+1";
 		try {
 			conn = getConnection();
 			pstmt = conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			System.out.println("카운트업 성공");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+			System.out.println("카운트업 실패");
 		} finally {
 			try {
 				if(pstmt!=null) pstmt.close();
@@ -66,5 +70,6 @@ public class CountDao {
 				e.printStackTrace();
 			}
 		}
+		return result;
 	}
 }
